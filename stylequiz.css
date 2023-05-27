@@ -1,0 +1,509 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+.choice-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.choice-grid div{
+    box-sizing: border-box;
+    width: 32.5%; 
+    border: 1px solid transparent;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.choice-grid div:hover{
+    background-color: #cfe3ff;
+}
+.choice-grid img{
+    width: 100%;
+}
+.choice-grid div.selected{
+    background-color:#cfe3ff;
+}
+.opacity{
+    opacity:0.6;
+}
+.hidden{
+    display: none;
+}
+/* Regole di definizione per la parte del risultato che appare dopo aver finito il test */
+
+#result{
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#result h1{
+    margin: 0;
+}
+#result p{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+#button{
+    display:flex;
+    justify-content:center;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    align-items:center;
+    background-color:rgb(116, 116, 116);
+    height:50px;
+    transition: .5s ease-in-out;
+}
+#button:hover{
+    background-color:rgba(178, 178, 178, 0.78);
+}
+/*** CONTENUTO DELLA NAVBAR ***/
+nav{
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+#menu{
+    display: none;
+  }    
+  #open-btn {
+    width: 250px;
+    height: 50px;
+    font-size: 1.2rem;
+    background: transparent;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
+    border: 2px solid transparent;
+    transition: .5s;
+  }
+  #open-btn div{
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  #modal {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.989);
+    width: 100px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    animation-name: animateModal;
+    animation-duration: .4s;
+  
+  }
+  #modal a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    margin-top: 20px;
+  }
+  #close-btn {
+    font-size: 2rem;
+  }
+  #modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
+    
+  }
+  
+  /* Modal Animation */
+  
+  @keyframes animateModal {
+  
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+  
+    to {
+        top: 0;
+        opacity: 1;
+    }
+  }
+  #flex-container{
+    display: flex;
+    height: 70px;
+    justify-content: right;
+    align-items: center;
+  }
+  .flex-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color:white;
+    font-family: sans-serif;
+    font-weight:lighter;
+    font-size: 1.5em;
+  }
+  .links{
+    text-decoration: none;
+    color: white;
+    transition: .2s ease-in-out;
+  }
+  .links:hover{
+    color:rgb(54, 54, 54)
+  }
+  #link-button{
+    text-decoration: none;
+    color: white;
+  }
+  #flex-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    background-color: rgb(71, 71, 71);
+    color:rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-weight:lighter;
+    font-size: 20px;
+    box-sizing: border-box;
+    border-radius: 500px;
+    transition: .5s ease-in-out;
+  }
+  #flex-button:hover{
+    background-color: rgba(255, 0, 0, 0.703);
+    font-size: 22px;
+  }
+  #barra{
+    background: #fff;
+    height: 25px;
+    margin: 16px;
+    width: 1px;
+  }
+  
+  /*-----------------------------------------------------------------------------*/
+  
+  /*** CONTENUTO DELL'HEADER ***/
+  header{
+    margin-top: 70px;
+    display: flex;
+    color: white;
+    height: 630px;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  #index-box{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: left;
+    font-size: 15px;
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+  p{
+    color: black;
+    margin: 5px;
+  }
+  .index{
+    text-decoration: none;
+    color: black;
+    transition: .5s ease-in-out;
+  }
+  .index:hover{
+    color: rgb(98, 97, 97);
+  }
+  #background{
+    height: 520px;
+  }
+  #presentation{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 50px;
+    text-align: center;
+  }
+  .choice-grid{
+    width: 50%;
+    margin: auto;
+  }
+  .choice-grid img.checkbox {
+    margin-top: 5px;
+    height: 20px;
+    width: 20px;
+  }
+  
+  #space {
+    margin: 18px 0;
+  }
+  
+  .question-name {
+    align-items: center;
+    background-image: url('./images/background.png');
+    display: flex;
+    width: 50%;
+    margin: auto;
+    height: 425px;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .question-name h1 {
+    background-color: rgba(255,255,255, 0.9);
+    color: black;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 60px;
+    padding: 10px;
+    max-width: 75%;
+  } 
+#result{
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#result h1{
+    margin: 0;
+}
+#result p{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+#button{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#cecece;
+    height:50px;
+}
+#button:hover{
+    background-color:#e0e0e0;
+}
+  /*** CONTENUTO DEL FOOTER ***/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    height: 670px;
+    background-color: rgb(0, 0, 0);
+  }
+  #blocco-parole-f{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 95%;
+  }
+  .parole-f{
+    color: rgb(255, 255, 255);
+    font-size: 1vw;
+    font-family: "Open Sans", sans-serif;
+  }
+  .barra-f{
+    width: 95%;
+    background-color: #fff;
+    height: 1px;
+    margin: 30px;
+  }
+  #blocco-social{
+    display: flex;
+    width: 95%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #nome-sito-piccolo{
+    font-size: 2.5vw;
+    color:rgb(255, 255, 255);
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #loghi{
+    margin-right: 20px;
+  }
+  .social{
+    height: 40px;
+    margin-left: 10px;
+    transition: .5s ease-in-out;
+  }
+  .social:hover{
+    opacity: 0.5;
+    height: 42px;
+  }
+  #blocco-informazioni{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    font-family: "Open Sans", sans-serif;  
+  }
+  .colonne{
+    display: flex;
+    width: calc(20%-50px);
+    flex-direction: column;
+    color: #fff;
+    font-weight: 100;
+  }
+  .colonne-titolo{
+    font-size: 1.2vw;
+  }
+  .colonne-descrizione{
+    line-height: 20px;
+    font-size: 1vw;
+    font-family: "Open Sans", sans-serif;
+    color:#fff;
+  }
+  #guitarrist{
+    height: 400px;
+  }
+  #email{
+    font-size: 1vw;
+    text-decoration: none;
+    color: white;
+    transition: .5s ease-in-out;
+  }
+  #email:hover{
+    opacity: 0.5;
+    font-size: 1.1vw;
+  }
+  .link-footer{
+    font-size: 1vw;
+    text-decoration: none;
+    color: white;
+    transition: .5s ease-in-out;
+  }
+  .link-footer:hover{
+    opacity: 0.5;
+  }
+/*-------------------------------------------------------------------------*/
+
+/*regole per la visualizzazione su dispositivi mobili secondo le specifiche assegnate*/
+  @media screen and (max-width: 1024px){
+    #background{
+      height: 400px;
+    }
+    p{
+      font-size: 20px;
+    }
+    header{
+      height: 500px;
+    }
+    #guitarrist{
+        display: none;
+    }
+
+    .colonne-titolo{
+        font-size: 2vw;
+    }
+    .colonne-descrizione{
+        line-height: 20px;
+        font-size: 2vw;
+        font-family: "Open Sans", sans-serif;
+        color:#fff;
+    }
+    .link-footer{
+        font-size: 2vw;
+        text-decoration: none;
+        color: white;
+        transition: .5s ease-in-out;
+    }
+    footer{
+        height: 550px;
+    }
+    .parole-f{
+        font-size: 2vw;
+    }
+    #email{
+        font-size: 2vw;
+    }
+    form{
+        text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 440px){
+    #flex-container{
+        display: none;
+    }
+    nav{
+        height: 50px;
+    }
+    #menu{
+        display: block;
+        margin:0;
+    }
+    header{
+      height: 50px;
+    }
+    #background{
+      display: none;
+    }
+    .question-name{
+      width: 90%;
+      height: 200px;
+      background-size: cover;
+    }
+    .question-name h1{
+      font-size: 20px;
+    }
+    .choice-grid{
+      width: 90%;
+    }
+    #result{
+      width: 80%;
+    }
+    footer{
+        height: 200px;
+    }
+    #blocco-informazioni{
+        display: none;
+    }
+    .box_spotify{
+        width: 250px;
+    }
+    #nome-sito-piccolo{
+        font-size: 4vw;
+    }
+    .parole-f{
+        font-size: 2.5vw;
+    }
+    .social{
+        height: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 950px) and (max-height: 450px){
+    #flex-container{
+      display: none;
+  }
+  nav{
+      height: 50px;
+  }
+  #menu{
+      display: block;
+  }
+  header{
+    height: 200px;
+    margin-bottom: 100px;
+}
+  }
