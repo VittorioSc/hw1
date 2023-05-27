@@ -6,6 +6,7 @@
         <link href="home.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM Plex Sans">
+        <script src="mobile.js" defer="true"></script>
     </head>
  <body>
     <nav>
