@@ -10,9 +10,24 @@
  <body>
     <nav>
         <div id = "menu">
-            <div class = "menu-div"></div>
-            <div class = "menu-div"></div>
-            <div class = "menu-div"></div>
+        <button id="open-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+    <!--Modal & Modal Background-->
+    <div id="modal-container">
+        <div id="modal">
+            <a href = "home.php">Home</a>
+            <a href = "history.php">About</a>
+            <a href = "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZZPzQpTbwkRwhhwcggPTwJZRWhqzRRjtCZdpkXKhgRxrbCRDGFDTrDFvXWHpttbRLXWpL">Contact</a>
+            <a href = "shop.php">Shop</a>
+            <a href = "profile.php">Profile</a>
+            <a href = "login.php">Login</a>
+            <div id="close-btn">&times;</div>
+        </div>
+    </div>
         </div>
         <div id ="flex-container">
             <span class ="flex-item">
