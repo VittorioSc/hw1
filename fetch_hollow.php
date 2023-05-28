@@ -11,8 +11,8 @@
 
     $jsonArray = array();
     while($row = mysqli_fetch_assoc($res)){
-        $jsonArray[] = array('id' => $row['id'], 'name' => $row['name'],
-        'picture' => $row['picture'], 'user' => $row['user']);
+        $jsonArray[] = array('id' => $row['id'], 'name' => $row['name'], 'type' => $row['type'],
+        'picture' => $row['picture']);
     }
 
     mysqli_free_result($res);
