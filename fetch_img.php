@@ -10,8 +10,7 @@
 
     $jsonArray = array();
     while($row = mysqli_fetch_assoc($res)){
-        $jsonArray[] = array('id' => $row['id'], 'type' => $row['type'],
-        'title' => $row['title'], 'picture' => $row['picture'], 'link' => $row['link']);
+        $jsonArray[] = array('id' => $row['id'], 'type' => $row['type'],'picture' => $row['picture']);
     }
 
     mysqli_free_result($res);
