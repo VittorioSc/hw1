@@ -15,12 +15,10 @@
 
         
         # USERNAME
-        // Controlla che l'username rispetti il pattern specificato
         if(!preg_match('/^[a-zA-Z0-9_]{1,15}$/', $_POST['username'])) {
             $error[] = "Username non valido";
         } else {
             $username = mysqli_real_escape_string($conn, $_POST['username']);
-            // Cerco se l'username esiste già o se appartiene a una delle 3 parole chiave indicate
             $query = "SELECT username FROM users WHERE username = '$username'";
             $res = mysqli_query($conn, $query);
             if (mysqli_num_rows($res) > 0) {
